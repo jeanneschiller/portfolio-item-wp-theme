@@ -12,7 +12,9 @@ get_header();  ?>
     <div class="content gallery-container">
       <div class="gallery-header">
       <?php the_post_thumbnail('large'); ?>
-      <!--<h2><?php// the_title(); ?></h2>-->
+      <div class="gallery-header-content">
+        <h2><?php the_title(); ?></h2>
+      </div>
       </div>
       <?php // Start the loop ?>
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>

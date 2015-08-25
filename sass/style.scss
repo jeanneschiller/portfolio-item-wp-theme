@@ -42,10 +42,11 @@ h2,
 h3 {
 	font-family: 'Belleza', sans-serif;
 	margin: 0;
+	color: $slategrey;
 }
 
 h1 {
-	font-size: 1.9rem;
+	font-size: 2.5rem;
 	display: inline-block;
 	margin: 0;
 	text-transform: uppercase;
@@ -58,7 +59,7 @@ h2 {
 	font-size: 1.5rem;
 	padding: 20px;
 	display: inline-block;
-	border: 2px solid $slategrey;
+	//border: 2px solid $slategrey;
 }
 a{
 	color: $teal;
@@ -98,7 +99,7 @@ header .container{
 }
 
 header h1 {
-	@include span-columns(3);
+	@include span-columns(4);
 }
 
 h1 a {
@@ -115,12 +116,12 @@ h3 {
 }
 
 ul.menu {
-	@include span-columns(9);
+	@include span-columns(8);
 	text-align: right;
 }
 
 ul.menu li {
-	padding: 0;
+	padding: 0.75% 1% 0 0 ;
 	display: inline-block;
 	margin-right:0;
 	margin-left: 50px;
@@ -129,7 +130,7 @@ ul.menu li {
 ul.menu li a {
 	background: $white;
 	color: $slategrey;
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	text-align: center;
@@ -204,8 +205,6 @@ ul.menu li a:hover:after {
 	font-size: 3rem;
 	text-align: left;
 	height: 300px;
-	//border: none;	
-	
 }
 
 .main-title p {
@@ -402,16 +401,35 @@ width: 50%;
 	text-align: center;
 	margin: 1% 0 0 3px;
 	padding: 3% 0 0 0;
+	
 }
 
 .gallery-container h2 {
-	margin: 25px 0 20px 0;
+	margin: 25px 50px 20px 0;
+	text-align: right;
+	font-size: 3rem;
+	color: $slategrey;
+	line-height: 1.5;
+	padding: 0;
 }
 
 .gallery-header{
 	margin: 5px !important;
 	padding-right:20px;
-	//height: 20vh;
+	position: relative;
+	height: 55vh;
+	overflow: hidden;
+	
+}
+.gallery-header img{
+	padding-bottom: 120px;
+}
+
+.gallery-header-content{
+	position: absolute;
+	top:0;
+	right:0;
+	text-align: right;
 }
 
 .gallery-item {
