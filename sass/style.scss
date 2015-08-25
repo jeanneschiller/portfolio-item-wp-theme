@@ -89,14 +89,21 @@ a{
 header {
 	background: $white;
 	padding: 2% 0;
+	//@include outer-container;
+}
+header .container{
+	max-width: 80em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 header h1 {
-	@include span-columns(4.5);
+	@include span-columns(3);
 }
 
 h1 a {
 	color: $teal;
+	margin-left: 12px;
 }
 
 h1 a:hover {
@@ -108,14 +115,15 @@ h3 {
 }
 
 ul.menu {
-	@include span-columns(7.5);
+	@include span-columns(9);
 	text-align: right;
 }
 
 ul.menu li {
 	padding: 0;
 	display: inline-block;
-	margin-right: 50px;
+	margin-right:0;
+	margin-left: 50px;
 }
 
 ul.menu li a {
@@ -191,12 +199,12 @@ ul.menu li a:hover:after {
 .main-title {
 	color: $slategrey;
 	position: absolute;
-	top: 20px;
-	left: 40px;
+	top: 0;
+	left: 17px;
 	font-size: 3rem;
 	text-align: left;
 	height: 300px;
-	border: none;	
+	//border: none;	
 	
 }
 
@@ -392,11 +400,18 @@ width: 50%;
 .gallery-container {
 	background:  $lightgrey;
 	text-align: center;
-	margin: 0;
+	margin: 1% 0 0 3px;
+	padding: 3% 0 0 0;
 }
 
 .gallery-container h2 {
 	margin: 25px 0 20px 0;
+}
+
+.gallery-header{
+	margin: 5px !important;
+	padding-right:20px;
+	//height: 20vh;
 }
 
 .gallery-item {
