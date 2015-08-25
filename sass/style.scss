@@ -1,0 +1,757 @@
+/*
+* Theme Name: HackerYou Starter Theme
+* Theme URI: http://hackeryou.com;
+* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Version: 1.0
+* Author: HackerYou
+* Author URI: http://hackeryou.com
+*/
+
+@import 'normalize';
+@import 'typography';
+@import 'navigation';
+@import 'sidebar';
+@import 'comments';
+@import 'footer';
+/*
+====================================
+Default Styling
+====================================
+*/
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import 'colours';
+
+html {
+	font-size: 10px;
+	background: $yellow;
+}
+
+body {
+	color: #333;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Belleza', sans-serif;
+	margin: 0;
+}
+
+h1 {
+	font-size: 1.9rem;
+	display: inline-block;
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	padding: 20px;
+	display: inline-block;
+	border: 2px solid $slategrey;
+}
+a{
+	color: $teal;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	@include outer-container;
+}
+
+.content {
+	float: left;
+	width: 65%;
+	margin-right: 5%;
+}
+
+.content-grey {
+	background: $lightgrey;
+}
+
+.full {
+	width: 100%;
+}
+
+//HEADER STYLES
+
+header {
+	background: $white;
+	padding: 2% 0;
+}
+
+header h1 {
+	@include span-columns(4.5);
+}
+
+h1 a {
+	color: $teal;
+}
+
+h1 a:hover {
+	color: $slategrey;
+}
+
+h3 {
+	color: $slategrey;
+}
+
+ul.menu {
+	@include span-columns(7.5);
+	text-align: right;
+}
+
+ul.menu li {
+	padding: 0;
+	display: inline-block;
+	margin-right: 50px;
+}
+
+ul.menu li a {
+	background: $white;
+	color: $slategrey;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+ul.menu li a:after {
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	width: 0;
+	height: 3px;
+	background: $teal;
+	content: '';
+	transition: width 0.3s;
+	padding: 0;
+}
+
+ul.menu li a:hover {
+	color: $teal;
+}
+
+ul.menu li a:hover:after {
+	width: 100%;
+}
+
+//HOMEPAGE STYLES
+
+.homepage-container {
+	@include outer-container;
+	padding: 3% 0;
+}
+
+.homepage-container h2 {
+	padding: 2%;
+}
+
+.boxes-container {
+	max-width: 970px;
+}
+
+.main {
+	background: $lightgrey;
+}
+
+.content {
+	width: 100%;
+	// background: white;
+}
+
+.blog-title {
+	font-size: 2rem;
+}
+
+.main-photo-container {
+	position: relative;
+	display: inline-block;
+	float: left;
+}
+
+.main-photo, .blog-photo {
+	margin: 5px;
+}
+
+.main-title {
+	color: $slategrey;
+	position: absolute;
+	top: 30px;
+	left: 40px;
+	font-size: 3rem;
+	text-align: left;
+	height: 300px;	
+	border: none;
+}
+
+.main-title p {
+	margin: 0;
+}
+
+.blog-link {
+	display:block;
+}
+
+.blog-photo-container {
+	position: relative;
+	float: left;
+	margin-bottom: 5px;
+}
+
+.blog-info {
+	background: rgba(255, 255, 255, 0.8);
+	display: none;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	bottom: 15px;
+	right: 10px;
+	transition: all 0.3s ease;
+}
+
+.blog-photo-container:hover .blog-info {
+	display: block;
+}
+
+.blog-title {
+	text-align: center;
+	padding-top: 30%;
+	font-size: 2rem;
+	padding-bottom: 5%;
+}
+
+.blog-title a {
+	color: $slategrey;
+}
+
+.blog-date {
+	font-size: 1.2rem;
+	font-family: 'Belleza', sans-serif;
+	color: $slategrey;
+	text-align: center;
+	padding-top: 3%;
+	margin: 0 10%;
+	border-top: 2px solid $teal;
+}
+
+//SINGLE POST STYLES
+.single-container {
+	background: white;
+}
+
+.entry-title, .entry-meta, .entry-content {
+	background: $lightgrey;
+}
+
+.entry-date, .entry-title, .entry-author, .entry-content {
+	float: left;
+}
+
+.entry-info {
+padding: 5% 2% 5px 2%;
+width: 50%;
+}
+
+.entry-title {
+	font-size: 2.25rem;
+	text-align: left;
+}
+
+.entry-title a {
+	color: $slategrey;
+}
+
+.entry-title a:hover {
+	color: $teal;
+}
+
+.entry-date {
+	font-size: 2.5rem;
+	font-family: 'Belleza', sans-serif;
+	width: 80px;
+	height: 80px;
+	line-height: 1;
+	background: $teal;
+	color: $slategrey;
+	padding: 1.5% 1%;
+	margin-top: 4%;
+	margin-right: 2%;
+	text-align: center;
+}
+
+.entry-author {
+	font-size: 1.6rem;
+	width: 50%;
+	margin: 0;
+}
+
+.entry-content {
+	font-size: 1.6rem;
+}
+
+.entry-content p {
+	padding-top: 1%;
+}
+
+.addtoany_content_bottom {
+	text-align: right;
+	float: right;
+	margin: 0;
+}
+
+.entry-utility {
+	background: $lightgrey;
+	color: $slategrey;
+	font-size: 1.2rem;
+	padding-left: 25%;
+	float: left;
+	margin-top: 25px;
+}
+
+.entry-utility a {
+	color: $teal;
+} 
+
+.entry-utility a:hover {
+	color: #000;
+}
+
+#nav-below {
+	background: $lightgrey;
+	color: $teal;
+}
+
+#nav-below p {
+	margin: 0;
+	width: 50%;
+	float: left;
+	background: $lightgrey;
+	font-size: 2rem;
+}
+
+#nav-below p a {
+	color: $slategrey;
+}
+
+#nav-below p a:hover {
+	color: $teal;
+}
+
+.nav-next {
+	text-align: right;
+}
+
+//SIDEBAR STYLES
+
+.sidebar {
+	float:left;
+	width: 18%;
+	padding: 1% 0;
+	margin: 3% 1% 0 0;
+}
+
+.sidebar-list li a {
+	color: $slategrey;
+}
+
+.sidebar-list li a:hover {
+	color: $teal;
+}
+
+.widget-title {
+	padding: 5% 0;
+	margin: 10% 20px 8% 0;
+	border-bottom: 1px solid $teal;
+	border-top: 1px solid $teal;
+}
+
+//HOMEPAGE STYLES
+
+.homepage-container {
+	@include outer-container;
+	padding: 3% 0;
+}
+
+.homepage-container h2 {
+	padding: 2%;
+}
+
+.boxes-container {
+	max-width: 970px;
+}
+
+.main {
+	background: $lightgrey;
+}
+
+.blog-title {
+	font-size: 2rem;
+}
+
+.main-photo-container {
+	position: relative;
+	display: inline-block;
+	float: left;
+}
+
+.main-photo, .blog-photo {
+	margin: 5px;
+}
+
+.main-title {
+	color: $slategrey;
+	position: absolute;
+	top: 40px;
+	left: 37px;
+	font-size: 3rem;
+	text-align: left;
+	height: 300px;	
+}
+
+.main-title p {
+	margin: 0;
+}
+
+.blog-link {
+	display: block;
+}
+
+.blog-photo-container {
+	position: relative;
+	float: left;
+	margin-bottom: 5px;
+}
+
+.blog-info {
+	background: rgba(255, 255, 255, 0.8);
+	display: none;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	bottom: 15px;
+	right: 10px;
+	transition: all 0.3s ease;
+}
+
+.blog-photo-container:hover .blog-info {
+	display: block;
+}
+
+.blog-title {
+	text-align: center;
+	padding-top: 30%;
+	font-size: 2rem;
+	padding-bottom: 5%;
+}
+
+.blog-title a {
+	color: $slategrey;
+}
+
+.blog-date {
+	font-size: 1.2rem;
+	font-family: 'Belleza', sans-serif;
+	color: $slategrey;
+	text-align: center;
+	padding-top: 3%;
+	margin: 0 10%;
+	border-top: 2px solid $teal;
+}
+
+
+//GALLERY STYLES
+.gallery {
+	background: $lightgrey;
+	margin:0;
+	padding: 0;
+	@include outer-container;
+}
+
+.gallery-container {
+	background:  $lightgrey;
+	text-align: center;
+	margin: 0;
+}
+
+.gallery-container h2 {
+	margin: 25px 0 20px 0;
+}
+
+.gallery-item {
+	margin: 5px !important;
+	float: left;
+}
+
+.gallery-item img {
+	height: 185px !important;
+	max-height: 185px !important;
+	min-height: 185px !important;
+	width: 185px !important;
+	max-width: 185px !important;
+	min-width: 185px !important;
+}
+
+//ABOUT/CONTACT/RSVP STYLES
+.about-me-container {
+	background: white;
+	position: relative;
+}
+
+.about-me-header {
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	background: white;
+}
+
+.container-container{
+	max-width: initial;
+}
+
+.page-full-text {
+	display: block;
+	color: $white;
+	background: $teal;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 20vh;
+	padding-bottom: 0;
+	text-align: center;
+	width: 50%;
+	float: left;
+	left: 0;
+	z-index: 5;
+	max-width: initial;
+	font-size: 1.2rem;
+}
+
+.about-title {
+	border: 2px solid white;
+}
+
+.about-post {
+	padding-top: 5%;
+	text-align: left;
+}
+
+.page-full-img {
+	display: block;
+	background: $white;
+	position: fixed;
+	left: 50%;
+	overflow: hidden;
+	// width: 101vh;
+	size: contain;
+	z-index:0;
+}
+
+
+//FORM STYLES
+
+form h2 {
+	border: 2px solid white;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+}
+
+.wpcf7-form {
+	text-align: center;
+	padding: 0;
+	padding-top: 10px;
+}
+
+.wpcf7-form h3 {
+	color: white;
+	padding: 1%;
+}
+
+.wpcf7-form input {
+	border: none;
+	padding:1%;
+	margin: 1% 0;
+	width: 100%;
+	background: white;
+}
+
+.wpcf7-form textarea {
+	border: none;
+	width: 100%;
+	margin: 1% 0;
+}
+
+.wpcf7-form-control.wpcf7-submit {
+	text-transform: uppercase;
+	border: 2px solid white;
+	padding: 20px;
+	color: white;
+	text-align: center;
+	font-size: 1.5rem;
+	padding: 20px;
+	display: inline-block;
+	width: 30%;
+	background: none;
+	font-family: 'Belleza', sans-serif;
+}
+
+.wpcf7-form-control.wpcf7-submit:hover {
+	border: 2px solid $teal;
+	color: $teal;
+	background: white;
+}
+
+.about-me-footer {
+	//position: fixed;
+	//bottom: 0;
+	width: 100%;
+	z-index: 50;
+	position: absolute;
+}
+
+//ARCHIVES STYLES
+.type-post {
+	background: $lightgrey;
+}
+
+.category-title {
+	padding: 5% 0;
+}
+
+
+//FOOTER STYLES
+footer {
+	@include outer-container;
+}
+
+.social-footer {
+	@include span-columns(12);
+	text-align: center;
+	color: $slategrey;
+	background: $lightgrey;
+	padding: 3%;
+	width: 100%;
+}
+
+.social-footer li {
+	display: block;
+}
+
+.social-footer  i {
+	color: $slategrey;
+}
+
+.social-footer  a {
+	font-size: 2rem;
+	padding: 0 1%;
+}
+
+.social-footer i:hover {
+	color: $teal;
+}
+
+.social-footer .contact {
+	font-size: 1rem;
+	padding: 0;
+	color: $slategrey;
+}
+
+.social-footer a:hover {
+	color: $teal;
+}
+
+//404 NOT FOUND
+.not-found-container{
+	background:white;
+}
+
+.not-found-body{
+	height:70vh;
+	text-align: center;
+	padding-top: 25vh;
+}
+
+//SINGLE PHOTO PAGE CONTENT
+.page-main{
+	min-height: 70vh;
+}
+
+.page-content {
+	@include span-columns(9);
+	min-height: 50vh;
+	margin: 24px 2% 0 0;
+}
+
+.page-main .sidebar {
+	background: white;
+	padding: 2%;
+	@include span-columns(3);
+	min-height: 81vh;
+}
+
+.page-main .sidebar h3 {
+	margin-right: 0;
+}
+
+.page-content {
+	text-align: center;
+}
+
+.page-content-title,
+.page-content-content {
+	margin: 0 0% 3% 0;
+	background: white;
+	padding: 5%;
+}
+
+.page-content img {
+	width: 100%;
+	height: auto;
+}
+
+.page-content-content {
+	text-align: left;
+}
+
+//AUTHOR PAGE
+.author-info{
+	@include span-columns(12);
+}
+.author-title,
+.author-pic,
+.author-description{
+	float: left;
+}
+.author-pic{
+	@include span-columns(3);
+	margin: 2% 0 0 0;
+}
+.author-title{
+	background: white;
+	text-align: center;
+	@include span-columns(9);
+	margin: 2% 0 0 2%;
+
+}
+.author-description{
+	@include span-columns(9);
+	margin: 2% 0 0 2%;
+	padding: 2%;
+	background: white;
+}
+
+
+
