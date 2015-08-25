@@ -56,7 +56,7 @@ h2 {
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 1.5rem;
-	//padding: 20px;
+	padding: 20px;
 	display: inline-block;
 	border: 2px solid $slategrey;
 }
@@ -381,100 +381,6 @@ width: 50%;
 	border-top: 1px solid $teal;
 }
 
-//HOMEPAGE STYLES
-
-// .homepage-container {
-// 	@include outer-container;
-// 	padding: 3% 0;
-// }
-
-// .homepage-container h2 {
-// 	padding: 2%;
-// }
-
-// .boxes-container {
-// 	max-width: 970px;
-// }
-
-// .main {
-// 	background: $lightgrey;
-// }
-
-// .blog-title {
-// 	font-size: 2rem;
-// }
-
-// .main-photo-container {
-// 	position: relative;
-// 	display: inline-block;
-// 	float: left;
-// }
-
-// .main-photo, .blog-photo {
-// 	margin: 5px;
-// }
-
-// .main-title {
-// 	color: $slategrey;
-// 	position: absolute;
-// 	top: 20px;
-// 	left: 37px;
-// 	font-size: 3rem;
-// 	text-align: left;
-// 	height: 300px;	
-// }
-
-// .main-title p {
-// 	margin: 0;
-// }
-
-// .blog-link {
-// 	display: block;
-// }
-
-// .blog-photo-container {
-// 	position: relative;
-// 	float: left;
-// 	margin-bottom: 5px;
-// }
-
-// .blog-info {
-// 	background: rgba(255, 255, 255, 0.8);
-// 	display: none;
-// 	position: absolute;
-// 	top: 10px;
-// 	left: 20px;
-// 	bottom: 15px;
-// 	right: 10px;
-// 	transition: all 0.3s ease;
-// }
-
-// .blog-photo-container:hover .blog-info {
-// 	display: block;
-// }
-
-// .blog-title {
-// 	text-align: center;
-// 	padding-top: 30%;
-// 	font-size: 2rem;
-// 	padding-bottom: 5%;
-// }
-
-// .blog-title a {
-// 	color: $slategrey;
-// }
-
-// .blog-date {
-// 	font-size: 1.2rem;
-// 	font-family: 'Belleza', sans-serif;
-// 	color: $slategrey;
-// 	text-align: center;
-// 	padding-top: 3%;
-// 	margin: 0 10%;
-// 	border-top: 2px solid $teal;
-// }
-
-
 //GALLERY STYLES
 .gallery {
 	background: $lightgrey;
@@ -490,7 +396,7 @@ width: 50%;
 }
 
 .gallery-container h2 {
-	//margin: 25px 0 20px 0;
+	margin: 25px 0 20px 0;
 }
 
 .gallery-item {
