@@ -10,7 +10,7 @@ get_header();  ?>
   <div class="container">
 
     <div class="content gallery-container">
-      <div class="gallery-header">
+      <div class="photo-header">
       <?php the_post_thumbnail('large'); ?>
       <div class="gallery-header-content">
         <h2><?php the_title(); ?></h2>

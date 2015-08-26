@@ -11,10 +11,17 @@ get_header();  ?>
     <!-- Content -->
     <div class="content-grey">
     <div class="boxes-container">
+
         <?php  if(have_posts()){
             while(have_posts()) {
                 the_post();
                 ?>
+                <div class="photo-header blog-header">
+                    <?php the_post_thumbnail('large'); ?>
+                    <div class="blog-header-content">
+                        <?php the_content(); ?>
+                    </div>
+                </div> 
                     <!-- Home page posts -->
                     <!-- content that is on the home page goes in this loop -->
                     

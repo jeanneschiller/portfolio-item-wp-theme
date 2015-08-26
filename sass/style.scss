@@ -413,7 +413,7 @@ width: 50%;
 	padding: 0;
 }
 
-.gallery-header{
+.photo-header{
 	margin: 5px !important;
 	padding-right:20px;
 	position: relative;
@@ -421,7 +421,7 @@ width: 50%;
 	overflow: hidden;
 	
 }
-.gallery-header img{
+.photo-header img{
 	padding-bottom: 120px;
 }
 
@@ -447,9 +447,18 @@ width: 50%;
 }
 
 //ABOUT/CONTACT/RSVP STYLES
+.container{
+	@include outer-container;
+}
+.about-me-container .main{
+	width: 100%;
+}
 .about-me-container {
 	background: white;
 	position: relative;
+}
+.about-me-container h2{
+	color: white;
 }
 
 .about-me-header {
@@ -459,47 +468,45 @@ width: 50%;
 	background: white;
 }
 
-.container-container{
-	max-width: initial;
-}
-
 .page-full-text {
+	@include span-columns(8);
+	@include shift(2);
 	display: block;
 	color: $white;
-	background: $teal;
-	padding-left: 5%;
-	padding-right: 5%;
-	padding-top: 20vh;
+	background: rgba(113, 220, 184, 0.75);
 	padding-bottom: 0;
 	text-align: center;
-	width: 50%;
-	float: left;
-	left: 0;
 	z-index: 5;
-	max-width: initial;
 	font-size: 1.2rem;
+	z-index: 1;
+	position: relative;
+}
+.container-container{
+	//overflow: hidden;
+}
+.page-full-img{
+	@include span-columns(6.75);
+	position: fixed;
+	z-index: 0;
 }
 
 .about-title {
 	border: 2px solid white;
+	margin-top: 30vh;
 }
 
 .about-post {
-	padding-top: 5%;
+	//@include span-columns(8);
+	//@include shift(2);
+	padding: 5% 2%;
 	text-align: left;
 }
-
-.page-full-img {
-	display: block;
-	background: $white;
-	position: fixed;
-	left: 50%;
-	bottom: -180;
+.about-me-container  .wp-post-image{
+	//@include span-columns(12);
+	height: auto;
 	overflow: hidden;
-	width: 100%;
-	z-index:0;
-	padding-right: 30%;
-	overflow: hidden;
+	margin-top:18vh;
+	//size: 120%;
 }
 
 
@@ -513,7 +520,7 @@ form h2 {
 }
 
 .wpcf7-form {
-	text-align: left;
+	text-align: center;
 	padding: 0;
 	padding-top: 10px;
 }
@@ -571,13 +578,32 @@ form h2 {
 .category-title {
 	padding: 5% 0;
 }
+
 //BLOG PAGE STYLES
+
+.blog-header-content{
+	@include span-columns(9);
+	@include shift(1.25);
+	position: absolute;
+	top:25%;
+	text-align: right;
+	color: white;
+	font-size: 1.6rem;
+	letter-spacing: 0.20em;
+	line-height: 1.75em;
+}
+.blog-header-content h3{
+	font-size: 2.5rem;
+	text-align: center;
+	color: white;
+}
 .blog-page-content{
 	padding: 0 20px 2% 9px;
+	margin-top: 3%;
 	margin-bottom: 2%;
 	display: inline-block;
 	text-align: left;
-	border-bottom: 2px solid $teal;
+	border-top: 2px solid $teal;
 	font-size: 1.6rem;
 
 }
@@ -585,7 +611,7 @@ form h2 {
 	padding-left: 0;
 	padding-bottom: 0;
 	display:block;
-	font-size: 2rem;
+	font-size: 2.6rem;
 }
 .blog-page-post{
 	@include span-columns(8);
@@ -603,9 +629,10 @@ form h2 {
 	height: auto;
 }
 .blog-page-date{
-	border-top: 2px solid $teal;
+	//border-top: 2px solid $teal;
 	padding-top: 1em;
 	size: 20%;
+	display: inline-block;
 }
 .blog-page-title,
 .blog-page-date{
@@ -710,31 +737,31 @@ footer {
 }
 
 //AUTHOR PAGE
-.author-info{
-	@include span-columns(12);
-}
-.author-title,
-.author-pic,
-.author-description{
-	float: left;
-}
-.author-pic{
-	@include span-columns(3);
-	margin: 2% 0 0 0;
-}
-.author-title{
-	background: white;
-	text-align: center;
-	@include span-columns(9);
-	margin: 2% 0 0 2%;
+//.author-info{
+// 	@include span-columns(12);
+// }
+// .author-title,
+// .author-pic,
+// .author-description{
+// 	float: left;
+// }
+// .author-pic{
+// 	@include span-columns(3);
+// 	margin: 2% 0 0 0;
+// }
+// .author-title{
+// 	background: white;
+// 	text-align: center;
+// 	@include span-columns(9);
+// 	margin: 2% 0 0 2%;
 
-}
-.author-description{
-	@include span-columns(9);
-	margin: 2% 0 0 2%;
-	padding: 2%;
-	background: white;
-}
+// }
+// .author-description{
+// 	@include span-columns(9);
+// 	margin: 2% 0 0 2%;
+// 	padding: 2%;
+// 	background: white;
+// }
 
 
 
