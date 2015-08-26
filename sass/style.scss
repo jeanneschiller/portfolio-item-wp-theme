@@ -494,10 +494,12 @@ width: 50%;
 	background: $white;
 	position: fixed;
 	left: 50%;
+	bottom: -180;
 	overflow: hidden;
-	// width: 101vh;
-	size: contain;
+	width: 100%;
 	z-index:0;
+	padding-right: 30%;
+	overflow: hidden;
 }
 
 
@@ -507,10 +509,11 @@ form h2 {
 	border: 2px solid white;
 	margin-top: 5vh;
 	margin-bottom: 5vh;
+	text-align: center;
 }
 
 .wpcf7-form {
-	text-align: center;
+	text-align: left;
 	padding: 0;
 	padding-top: 10px;
 }
@@ -555,8 +558,6 @@ form h2 {
 }
 
 .about-me-footer {
-	//position: fixed;
-	//bottom: 0;
 	width: 100%;
 	z-index: 50;
 	position: absolute;
@@ -570,7 +571,49 @@ form h2 {
 .category-title {
 	padding: 5% 0;
 }
+//BLOG PAGE STYLES
+.blog-page-content{
+	padding: 0 20px 2% 9px;
+	margin-bottom: 2%;
+	display: inline-block;
+	text-align: left;
+	border-bottom: 2px solid $teal;
+	font-size: 1.6rem;
 
+}
+.blog-page-title{
+	padding-left: 0;
+	padding-bottom: 0;
+	display:block;
+	font-size: 2rem;
+}
+.blog-page-post{
+	@include span-columns(8);
+	display: inline-block;
+	float: right;	
+}
+.blog-page-post p{
+	margin-top: 0;
+
+}
+.blog-page-photo {
+	@include span-columns(4);
+	display: inline-block;
+	float: left;
+	height: auto;
+}
+.blog-page-date{
+	border-top: 2px solid $teal;
+	padding-top: 1em;
+	size: 20%;
+}
+.blog-page-title,
+.blog-page-date{
+	display: inline-block;
+	float: left;
+	width: 100%;
+	text-align: left;
+}
 
 //FOOTER STYLES
 footer {

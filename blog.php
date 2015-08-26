@@ -29,14 +29,12 @@ get_header();  ?>
                             <!-- Blog posts -->
                             <!-- For each blog post you get to work with that in here -->
                             
-                                 
-                                <?php the_post_thumbnail('medium'); ?>
-                                 
-                                  
-                                <h3 class="blog-title"><?php the_title(); ?></h3>
-                                <p class="blog-date"><?php the_date('M j, Y'); ?></p>
-                                <p> <?php the_content(); ?> </p>
-                              
+                            <div class="blog-page-content">
+                                <h2 class="blog-page-title"><?php the_title(); ?></h2>
+                                <p class="blog-page-date"><?php the_date('M j, Y'); ?></p>     
+                                <img class="blog-page-photo" <?php the_post_thumbnail('thumbnail'); ?>
+                                <div class="blog-page-post"> <?php the_content(); ?> </div>
+                            </div>  
 
                             <?php
                         }

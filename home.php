@@ -1,16 +1,17 @@
 <?php //template name: homepage?>
 <?php get_header(); ?>
 
-<div class="main">
+
+  </div> <!-- /.container --><div class="main">
   <div class="homepage-container">
 
-	<!-- Content -->
+    <!-- Content -->
     <div class="content-grey">
     <div class="boxes-container">
-		<?php  if(have_posts()){
-			while(have_posts()) {
-				the_post();
-				?>
+        <?php  if(have_posts()){
+            while(have_posts()) {
+                the_post();
+                ?>
                     <!-- Home page posts -->
                     <!-- content that is on the home page goes in this loop -->
                     <div class="main-photo-container">
@@ -48,15 +49,14 @@
                     ?>
 
 
-				<?php
-			}//end of while loop
-		}//end of if statement
-		?>
+                <?php
+            }//end of while loop
+        }//end of if statement
+        ?>
         </div> <!--/.boxes-container-->
 
     </div> <!--/.content-grey -->
 
-  </div> <!-- /.container -->
 </div> <!-- /.main -->
 <div class="footer-container content-grey">
     <?php get_footer(); ?>
